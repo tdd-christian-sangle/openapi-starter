@@ -10,7 +10,7 @@ info:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   x-logo:
-    url: https://redocly.github.io/openapi-template/logo.png
+    url: https://cdn.vox-cdn.com/thumbor/zXDwlBBFvXPzVvV4WRSUsigc4FY=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/24458108/captain_pikachu.jpg
   description: |
     This is an **example** API to demonstrate features of the OpenAPI specification.
 
@@ -49,6 +49,13 @@ info:
 
     interfaces have done for lower-level programming, OpenAPI removes the
     guesswork in calling the service.
+
+    # Changelog
+    | Date  | Request  | Change  |
+    |-------|----------|---------|
+    | 2023-04-20 | GET  | Added new endpoint  |
+    | 2023-04-23 | GET/POST | Versioned API to V2 | 
+    |   |   |   |
 tags:
   - name: Echo
     description: Example echo operations.
@@ -56,6 +63,8 @@ tags:
     description: Operations about users.
   - name: Tag
     description: This is a tag description.
+  - name: mySampleGetRequest
+    description: this is a tag description.
 servers:
   - url: https://{tenant}/api/v1
     variables:
@@ -297,6 +306,31 @@ paths:
                 $ref: '#/components/schemas/Schema'
         '400':
           $ref: '#/components/responses/Problem'
+  /getRequestExample:
+    get:
+      tags:
+        - mySampleGetRequest
+      summary: Sample Get request for this endpoint
+      description: Get some data
+      operationId: myGetRequest
+      security: []
+      responses:
+        '200':
+          description: OK
+          headers:
+            some-header:
+              schema:
+                type: string
+                default: this is the default value
+          content:
+            application/json:
+              schema:
+                type: string
+              examples:
+                response:
+                  value: Hello world!
+        '404':
+          description: NOT FOUND
 components:
   securitySchemes:
     main_auth:

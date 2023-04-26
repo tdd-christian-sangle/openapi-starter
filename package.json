@@ -7,7 +7,8 @@
   "private": true,
   "scripts": {
     "start": "redocly preview-docs",
-    "build": "redocly bundle -o dist",
-    "test": "redocly lint"
+    "build": "redocly bundle -o myApiTest",
+    "test": "redocly lint",
+    "build-docs": "npm run build; redocly build-docs myApiTest.yaml -o myApiTest.html"
   }
 }
