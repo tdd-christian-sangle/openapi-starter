@@ -40,5 +40,5 @@ guesswork in calling the service.
 | Date  | Request  | Change  |
 |-------|----------|---------|
 | 2023-04-20 | GET  | Added new endpoint  |
-| 2023-04-23 | GET/POST | Versioned API  | 
+| 2023-04-23 | GET/POST | Versioned API to V2 | 
 |   |   |   |
