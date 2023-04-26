@@ -1,0 +1,24 @@
+get:
+  tags:
+    - mySampleGetRequest
+  summary: Sample Get request for this endpoint
+  description: Get some data
+  operationId: myGetRequest
+  security: []
+  responses:
+    '200':
+      description: OK
+      headers: 
+        some-header:
+          schema: 
+            type: string
+            default: this is the default value
+      content: 
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value: Hello world!
+    '404':
+      description: NOT FOUND

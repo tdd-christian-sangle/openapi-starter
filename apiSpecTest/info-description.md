@@ -35,3 +35,10 @@ implementation logic. Similar to what
 
 interfaces have done for lower-level programming, OpenAPI removes the
 guesswork in calling the service.
+
+# Changelog
+| Date  | Request  | Change  |
+|-------|----------|---------|
+| 2023-04-20 | GET  | Added new endpoint  |
+| 2023-04-23 | GET/POST | Versioned API  | 
+|   |   |   |
